@@ -20,13 +20,137 @@ Select ONE Additional Feature to Add
 <head>
   <title>Unit 5 Project</title>
   <meta charset="utf-8">
-  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaGuardia Semi-Annual</title>
+    <!-- Additional Feature: Flexbox with Flip Card -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #add8e6, #00008b);
+            color: white;
+        }
 
-  </style>
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1e3a5f;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header h2 {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .event-details {
+            background-color: #104a7f;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .event-details span {
+            font-weight: bold;
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 150px;
+            height: 150px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1e3a5f;
+            color: white;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background-color: #104a7f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1e3a5f;
+            font-size: 0.8rem;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>LaGuardia Semi-Annual</h1>
+        <h2>Featuring Senior Chorus and the LaGuardia Philharmonic</h2>
+    </header>
 
- 
+    <div class="container">
+        <div class="event-details">
+            <p>Join us for a spectacular evening of music!</p>
+            <p><span>January 15 and 16</span> at 6:30 PM</p>
+            <p>Location: <span>LaGuardia High School</span></p>
+        </div>
+
+        <div class="images">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Senior Chorus</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>LaGuardia Philharmonic</p>
+                    </div>
+               
+    </div>
+
+    <footer>
+        &copy; 2025 LaGuardia High School. All Rights Reserved.
+    </footer>
 
 </body>
 </html>
